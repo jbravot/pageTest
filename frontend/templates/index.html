@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block content %}
+	<!-- Header -->
+    <header>
+       	<div class="container text-center">
+          <h1>Analice su sitio web</h1>
+          <h2>Con varios aspectos SEO examinados simultáneamente</h2>
+        </div>
+    </header>
+    <!-- End Header -->
+
+	<!-- Portafolio -->
+    <section>
+	    <div class="container">
+	        <div class="row">
+	          <div class="span6 offset3">
+	            <div id="cont-dominio-form">
+					{% if error %}
+					<div class="alert alert-error">
+						<!--<a class="close" data-dismiss="alert">×</a>-->
+						<strong>Primero</strong>
+						 Ingrese un dominio.
+					</div>
+					{% endif %}
+					<div class="input-div">
+						<form action="/analizar/" method="post" id="dominioForm">{% csrf_token %}
+							<input type="text" name="dominioInput" id="dominioInput" placeholder="dominio.com">
+							<button type="submit" id="analizarButton" class="boton boton-blue">Analizar</button>
+						</form>
+					</div>
+				</div>
+	          </div>
+	        </div>
+	        <div class="row text-center">
+				<div class="span4">
+					<div class="box box-blue">
+						<div class="padding-top">
+							<img src="{% static 'web/images/seo-optimizar.png' %}" width="124" height="133" alt="">
+						</div>
+						<h3>Optimice su sitio web</h3>
+						<div class="padding-bottom">
+							<p>
+								Representacion estructurada de los principales factores SEO, con sugerencias practicas para mejorar su posicionamiento web.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="box box-green">
+						<div class="padding-top">
+							<img src="{% static 'web/images/seo-investigar.png' %}" width="124" height="133" alt="">
+						</div>
+						<h3>Investigación SEO</h3>
+						<div class="padding-bottom">
+							<p>
+								El más importante y relevante para los motores de búsqueda.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="span4">
+					<div class="box box-yellow">
+						<div class="padding-top">
+							<img src="{% static 'web/images/seo-competidor.png' %}" width="124" height="133" alt="">
+						</div>
+						<h3>Análisis de la competencia</h3>
+						<div class="padding-bottom">
+							<p>
+								Compárese con la competencia y ejecute las mejores prácticas.
+							</p>
+						</div>
+					</div>
+				</div>
+	          </div>
+	    </div>
+	</section>
+{% endblock %}

@@ -1,0 +1,74 @@
+<div id="seo-meta-title" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">{{ titulo_title }}</span>
+	</div>
+	<div class="span6">
+		<div class="data">{{ valor_title }} <br /> {{ longitud_title|safe|escape }}</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+	{% comment %}
+		<p>{{ valor_info_title }}</p>
+		<p>
+			Asegúrese de que el título es explícito y contiene las <a target="_blank" href="http://usabilitygeek.com/15-title-tag-optimization-guidelines-for-usability-and-seo" rel="nofollow">palabras clave más importantes</a>.
+		</p>
+		<p>
+			Asegúrese de que cada página tiene un título único.
+		</p>
+	{% endcomment %}
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div id="seo-meta-description" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">{{ titulo_description }}</span>
+	</div>
+	<div class="span6">
+		<div class="data">{{ valor_description }} <br /> {{ longitud_description|safe|escape }}</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+	{% comment %}
+		<p>{{ valor_info_description }}</p>
+		<p>
+			<a target="_blank" href="http://en.wikipedia.org/wiki/Meta_element#The_description_attribute" rel="nofollow"> Las meta descripciones</a> le permiten decidir cómo se describen y se muestran sus páginas web en los resultados de búsqueda.
+		</p>
+		<p>
+			Asegúrese de que la meta descripción es explícita y contiene sus <a target="_blank" href="http://googlewebmastercentral.blogspot.com/2007/09/improve-snippets-with-meta-description.html" rel="nofollow">palabras clave más relevantes</a>.
+		</p>
+		<p>
+			Consulte su Google™ Webmaster Tools por si hubiera mensajes de advertencia sobre meta descripciones duplicadas.
+		</p>
+	{% endcomment %}
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div id="seo-meta-keywords" class="fila">
+	<div class="box-value">
+		<span class="status">
+		</span><span class="title">{{ titulo_keywords }}</span>
+	</div>
+	<div class="span6">
+		<div class="data">{{ valor_keywords }} <br /> {{ longitud_keywords|safe|escape }}</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+	{% comment %}
+		<p>
+			<a target="_blank" href="http://en.wikipedia.org/wiki/Meta_element#The_keywords_attribute" rel="nofollow">meta keywords </a> se utilizan para determinar palabras clave que son relevantes para el contenido de su sitio web. No obstante, debido al uso abusivo que se ha hecho de esta etiqueta por parte de los spammers, ha dejado de tener <a target="_blank" href="http://en.wikipedia.org/wiki/Meta_element#The_keywords_attribute" rel="nofollow">meta keywords </a> para su posicionamiento en búsquedas.
+		</p>
+		<p>
+			No hay ningún problema en ignorar el uso de esta etiqueta en páginas nuevas. Para las ya existentes, asegúrese de que las meta keywords están limpias de spam.
+		</p>
+	{% endcomment %}
+	</div>
+	<div class="clear"></div>
+</div>

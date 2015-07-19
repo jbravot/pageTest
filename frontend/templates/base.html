@@ -1,0 +1,96 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html xml:lang="es" lang="es">
+	<head>
+		<!-- styles -->
+		<link href="{% static 'web/bootstrap/css/bootstrap.css' %}" rel="stylesheet" media="screen">
+		<link href="{% static 'web/bootstrap/css/bootstrap-responsive.min.css' %}" rel="stylesheet" media="screen">
+
+		{% block stylesheets %}
+		<link rel="stylesheet" href="{% static 'web/css/main.css' %}">
+		{% endblock %}
+
+		<!-- favicon and touch icons -->
+	    <link rel="apple-touch-icon" href="{% static 'web/images/logo/ios/icon.png' %}" />
+	    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'web/images/logo/ios/Icon-72.png' %}" />
+	    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'web/images/logo/ios/Icon@2x.png' %}" />
+	    <link rel="apple-touch-icon" sizes="144x144" href="{% static 'web/images/logo/ios/Icon-72@2x.png' %}" />
+	    <link rel="icon" type="image/png" href="{% static 'web/images/logo/favicon.png' %}">
+
+	    <!--[if (lt IE 9)&(!IEMobile 7)]>
+	        <script src="{% static 'web/js/ie/modernizr-2.0.6.min.js' %}"></script>
+	        <script src="{% static 'web/js/ie/css3-mediaqueries.js' %}"></script>
+	    <![endif]-->
+
+		<!-- meta tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>{% block title %}PageTest - SEO Tools{% endblock %}</title>
+		<meta name="description" content="PageTest es una herramienta gratuita de SEO y análisis web."/>
+		<meta name="author" content="Jonathan Bravo" />
+		<link rel="canonical" href="http://seo-PageTest.appspot.com/" />
+
+		<!-- Open Graph -->
+		<meta property='og:locale' content='ec_EC'/>
+		<meta property='og:title' content='PageTest | SEO Tools'/>
+		<meta property='og:description' content='PageTest es una herramienta gratuita de SEO y análisis web.'/>
+		<meta property='og:url' content='http://seo-PageTest.appspot.com/'/>
+		<meta property='og:site_name' content='PageTest SEO Tools'/>
+	</head>
+	<body data-spy="scroll" data-target=".menu">
+	<!-- Navbar -->
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/"><span>PageTest BETA</span></a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active">
+                      <a href="">Inicio</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Navbar -->
+    {% block content %}
+
+	{% endblock %}
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+		    <div class="row">
+		        <div class="span12 text-left">
+		          <a href="http://www.jonathanbravo.com" title="Desarrollado por jonathan bravo" target="_blank">Desarrollado por <strong>Jonathan Bravo</strong></a>
+		        </div>
+		    </div>
+		</div>
+	</footer>
+	<!-- End Footer -->
+
+    <!-- Script -->
+
+    <script src="{% static 'web/js/jquery.js' %}" charset="utf-8"></script>
+	<script src="{% static 'web/bootstrap/js/bootstrap.min.js' %}" charset="utf-8"></script>
+	{% block javascript %}
+
+	{% endblock %}
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-42925809-1', 'seo-PageTest.appspot.com');
+	  ga('send', 'pageview');
+
+	</script>
+	</body>
+</html>

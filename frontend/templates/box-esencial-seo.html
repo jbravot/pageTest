@@ -1,0 +1,134 @@
+<div id="www" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Resolver www
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data">
+			<span id="no-www">¡Mal! Su sitio web con o sin www no redirecciona a la misma página.</span>
+			<span id="si-www" style="display:none">¡Perfecto! Su sitio web con o sin www redirecciona a la misma página.</span>
+		</div>
+	</div>
+	<div class="span9 box-info box-info-grey">
+	{% comment %}
+		<p>
+			{{ valor_info|safe|escape }}
+		</p>
+	{% endcomment %}
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+<div id="seo-robots" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Fichero robots.txt
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data">
+			<span id="data-robots">N/N</span>
+		</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+	{% comment %}
+		<p>
+			Un fichero robots.txt permite restringir el acceso a los robots de los motores de búsqueda que rastrean la web y puede evitar que accedan a directorios y páginas determinadas. También especifica la ubicación del archivo del mapa del sitio XML.
+		</p>
+	{% endcomment %}
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+<div id="seo-sitemap" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Mapa del sitio XML
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data">
+			<span id="data-sitemap">N/N</span>
+		</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+	{% comment %}
+		<p>
+			Un mapa del sitio enumera las URL que pueden rastrearse y puede incluir información adicional, como las últimas actualizaciones del sitio web, la frecuencia de cambios y la importancia de las URL. Esto permite a los motores de búsqueda rastrear el sitio web de una forma más exhaustiva.
+		</p>
+	{% endcomment %}
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+<div id="google-pr" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Google™ Page Rank
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data">
+			<span id="data-pr"></span>
+		</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+	{% comment %}
+		<p>
+			El
+			<a target="_blank" href="http://en.wikipedia.org/wiki/PageRank" rel="nofollow">PageRank™</a> (denominado también como PR) es un enlace al algoritmo de análisis utilizado por Google™ con el que se valora la popularidad/autoridad de una web. El PageRank puntúa entre 0 y 10. Los sitios webs de nueva creación tienen PR0 mientras que las webs con más autoridad, como Twitter.com, tienen PR10.
+		</p>
+		<p>
+			Las webs que cuentan con un PageRank alto se rastrean más frecuentemente y sus enlaces de salida cuentan con un mayor
+			<a target="_blank" href="http://thekeywordacademy.com/idevaffiliate/idevaffiliate.php?id=1524&amp;url=73" rel="nofollow">link juice.</a>
+		</p>
+	{% endcomment %}
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div id="index-page" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Páginas indexadas
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data" style="height: 200px;">
+			<div id="graficoIndex" style="width: 550px; height: 200px; margin: 0 auto;"></div>
+		</div>
+	</div>
+	<div class="span9 box-info box-info-grey">
+	{% comment %}
+		<p>
+			Cuantas más páginas indexen los motores de búsqueda, mejor, ya que esto ofrece más oportunidades de que su sitio web se encuentre.
+		</p>
+		<p>
+			Un número bajo (en relación al número total de páginas o URL de su web) probablemente indica que es necesario mejorar la arquitectura de los enlaces internos y que esto está impidiendo que los motores de búsqueda rastreen todas las páginas de su sitio web. Quizás desee consultar o crear el mapa del sitio en formato XML de su sitio web y enviarlo a los distintos motores de busquedas. También debería construir backlinks hacia las páginas internas de su web para ayudar a los bots de Google™, Yahoo!™ y Bing™ a rastrear e indexar sus páginas.
+		</p>
+	{% endcomment %}
+	</div>
+	<div class="clear"></div>
+</div>

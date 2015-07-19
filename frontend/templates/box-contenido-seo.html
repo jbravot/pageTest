@@ -1,0 +1,250 @@
+<div id="seo-meta-title" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Título
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data">
+			<span id="data-title"></span>
+			<br />
+			<strong>Longitud:</strong> <span id="data-title-size"></span> caracteres
+		</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+	{% comment %}
+		<p>
+			Se recomienda que el título este entre 10 y 70 caracteres.
+		</p>
+		<p>
+			Asegúrese de que el título es explícito y contiene las <a target="_blank" href="http://usabilitygeek.com/15-title-tag-optimization-guidelines-for-usability-and-seo" rel="nofollow">palabras clave más importantes</a>.
+		</p>
+		<p>
+			Asegúrese de que cada página tiene un título único.
+		</p>
+	{% endcomment %}
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+<div id="seo-meta-description" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Descripción
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data">
+			<span id="data-description"></span>
+			<br />
+			<strong>Longitud:</strong> <span id="data-description-size"></span> caracteres
+		</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+		<p>
+			Se recomienda que el meta descripción este entre 70 y 160 caracteres (incluyendo espacios).
+		</p>
+		<p>
+			<a target="_blank" href="http://en.wikipedia.org/wiki/Meta_element#The_description_attribute" rel="nofollow"> Las meta descripciones</a> le permiten decidir cómo se describen y se muestran sus páginas web en los resultados de búsqueda.
+		</p>
+		<p>
+			Asegúrese de que la meta descripción es explícita y contiene sus <a target="_blank" href="http://googlewebmastercentral.blogspot.com/2007/09/improve-snippets-with-meta-description.html" rel="nofollow">palabras clave más relevantes</a>.
+		</p>
+		<p>
+			Consulte su Google™ Webmaster Tools por si hubiera mensajes de advertencia sobre meta descripciones duplicadas.
+		</p>
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+<div id="seo-meta-keywords" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Palabras clave meta
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data">
+			<span id="data-keywords"></span>
+			<br />
+			<strong>Longitud:</strong> <span id="data-keywords-size"></span> caracteres
+		</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+		<p>
+			<a target="_blank" href="http://en.wikipedia.org/wiki/Meta_element#The_keywords_attribute" rel="nofollow">meta keywords </a> se utilizan para determinar palabras clave que son relevantes para el contenido de su sitio web. No obstante, debido al uso abusivo que se ha hecho de esta etiqueta por parte de los spammers, ha dejado de tener <a target="_blank" href="http://en.wikipedia.org/wiki/Meta_element#The_keywords_attribute" rel="nofollow">meta keywords </a> para su posicionamiento en búsquedas.
+		</p>
+		<p>
+			No hay ningún problema en ignorar el uso de esta etiqueta en páginas nuevas. Para las ya existentes, asegúrese de que las meta keywords están limpias de spam.
+		</p>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div id="contenido-encabezados" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Encabezados
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data">
+			<table class="table table-bordered">
+				<tbody>
+					<tr>
+						<th>H1</th>
+						<th>H2</th>
+						<th>H3</th>
+						<th>H4</th>
+						<th>H5</th>
+					</tr>
+					<tr>
+						<td><span id="data-h1"></span></td>
+						<td><span id="data-h2"></span></td>
+						<td><span id="data-h3"></span></td>
+						<td><span id="data-h4"></span></td>
+						<td><span id="data-h5"></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<ul id="data-list-encabezados">
+			</ul>
+		</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+		<p>{{ descripcion }}</p>
+	</div>
+	<div class="clear"></div>
+</div>
+
+<div id="contenido-img" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Imagenes
+		</span>
+	</div>
+	<div class="span6">
+		<span class="data">
+			<p>
+				Se encontraron <span id="data-img-total"></span> images
+			</p>
+			<p>
+				<span id="data-alt-vacios"></span> atributos ALT estan vacios
+			</p>
+		</span>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+		<p>{{ descripcion }}</p>
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+<div id="contenido-flash" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Flash
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data">
+			<span id="data-flash"></span>
+		</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+		<p>{{ descripcion }}</p>
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+<div id="contenido-iframe" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Iframes
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data">
+			<span id="data-iframe"></span>
+		</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+		<p>{{ descripcion }}</p>
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+<div id="contenido-size" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Tamaño
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data">
+			<span id="data-size"></span>
+		</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+		<p>{{ descripcion }}</p>
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+<div id="contenido-text-ratio" class="fila">
+	<div class="span1">
+		<span class="status"></span>
+	</div>
+	<div class="span2">
+		<span class="title">
+			Taza Texto/HTML
+		</span>
+	</div>
+	<div class="span6">
+		<div class="data">
+			<span id="data-text-ratio"></span>
+		</div>
+
+	</div>
+	<div class="span9 box-info box-info-grey">
+		<p>{{ descripcion }}</p>
+	</div>
+	<div class="clear"></div>
+</div>

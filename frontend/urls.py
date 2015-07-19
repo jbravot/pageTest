@@ -1,0 +1,31 @@
+from django.conf.urls import patterns, include, url
+from django.contrib import admin
+
+urlpatterns = patterns('',
+    # Examples:
+    # url(r'^$', 'pagetest.views.home', name='home'),
+    # url(r'^blog/', include('blog.urls')),
+	(r'^$', 'frontend.views.generar'),
+    (r'^website/(?P<dominio>.+?)/$','frontend.views.analizar'),
+    (r'^getTrafic/$', 'frontend.views.getTrafic'),
+    (r'^getRedireccionWWW/$', 'frontend.views.getRedireccionWWW'),
+    (r'^getRobots/$', 'frontend.views.getRobots'),
+    (r'^getSitemap/$', 'frontend.views.getSitemap'),
+    (r'^getGooglePR/$', 'frontend.views.getGooglePR'),
+    (r'^getIndexBrowser/$', 'frontend.views.getIndexBrowser'),
+    (r'^getEnlaces/$','frontend.views.getEnlaces'),
+    (r'^getBacklinks/$','frontend.views.getBacklinks'),
+    (r'^getMetaTags/$', 'frontend.views.getMetaTags'),
+    (r'^getTagsContenido/$', 'frontend.views.getTagsContenido'),
+    (r'^getMetaMovil/$','frontend.views.getMetaMovil'),
+    (r'^getSocial/$', 'frontend.views.getSocial'),
+    (r'^getFavicon/$', 'frontend.views.getFavicon'),
+    (r'^getDC/$','frontend.views.getDC'),
+    (r'^getIp/$', 'frontend.views.getIp'),
+    (r'^getSpanBlock/$','frontend.views.getSpanBlock'),
+    (r'^getW3cValidate/$', 'frontend.views.getW3cValidate'),
+    (r'^getGoogleAnalytics/$','frontend.views.getGoogleAnalytics'),
+    (r'^getDoctype/$', 'frontend.views.getDoctype'),
+    (r'^getScreenshotWebsite/$', 'frontend.views.getScreenshotWebsite'),
+    (r'^getScreenshotWebsiteMovil/$','frontend.views.getScreenshotWebsiteMovil'),
+)

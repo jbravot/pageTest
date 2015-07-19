@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% load static from staticfiles %}
+
+{% block javascript %}
+	<script charset="UTF-8" src="//code.highcharts.com/highcharts.js"></script>
+	<script charset="UTF-8" src="{% static 'web/js/jquery-scrollspy.js' %}"></script>
+    <script charset="UTF-8" src="{% static 'web/js/tools.js' %}"></script>
+    <script charset="UTF-8" src="{% static 'web/js/api.js' %}"></script>
+	<script charset="UTF-8" src="{% static 'web/js/main.js' %}"></script>
+
+{% endblock %}
+
+{% block title %}Análisis de {{ dominio }} - PageTest{% endblock %}
+
+{% block content %}
+
+	<section id="resultados">
+	    <div class="container">
+	        <div class="row">
+	        	<div class="span10 offset1 border-resultados">
+	        		<div>
+						<h1>
+							Análisis de {{ dominio }}
+						</h1>
+						<div class="date">
+							{{ fecha }}
+						</div>
+						<div style="clear: both;"></div>
+					</div>
+					<div class="bar-progress">
+						<span id="bar" class="progress-dark"></span>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+	        	<div class="span10 offset1 border-resultados">
+					<div>
+					{% comment %}
+						<div id="general" class="box-result">
+							<div class="box-contenido">
+								<div id="general">
+									<div id="screenshot-website" class="screenshot-website">
+										<div>
+						                	<img alt="Imagen del dominio" class="camera_loader" src="{% static 'web/images/camera_loader.gif' %}" />
+						            	</div>
+						            </div>
+								</div>
+							</div>
+						</div>
+					{% endcomment %}
+						<div id="trafico" class="box-result box-blue">
+							<div class="box-titulo">
+								<img alt="cargando..." class="loader" src="{% static 'web/images/loader.gif' %}" />
+								<h3>Tráfico de Alexa™</h3>
+							</div>
+							<div class="box-contenido">
+								{% include 'box-trafico.html' %}
+							</div>
+						</div>
+						<div id="esencial" class="box-result box-green">
+							<div class="box-titulo">
+								<img alt="cargando..." class="loader" src="{% static 'web/images/loader.gif' %}" />
+								<h3>Lo esencia del SEO</h3>
+							</div>
+							<div class="box-contenido">
+								{% include 'box-esencial-seo.html' %}
+							</div>
+						</div>
+						<div id="enlaces-seo" class="box-result box-yellow">
+							<div class="box-titulo">
+								<img alt="cargando..." class="loader" src="{% static 'web/images/loader.gif' %}" />
+								<h3>Enlaces SEO</h3>
+							</div>
+							<div class="box-contenido">
+								{% include 'box-enlaces-seo.html' %}
+							</div>
+						</div>
+						<div id="contenido" class="box-result box-purple">
+							<div class="box-titulo">
+								<img alt="cargando..." class="loader" src="{% static 'web/images/loader.gif' %}" />
+								<h3>Contenido SEO</h3>
+							</div>
+							<div class="box-contenido">
+								{% include 'box-contenido-seo.html' %}
+							</div>
+						</div>
+						<div id="movil" class="box-result box-blue">
+							<div class="box-titulo">
+								<img alt="cargando..." class="loader" src="{% static 'web/images/loader.gif' %}" />
+								<h3>Movil</h3>
+							</div>
+							<div class="box-contenido">
+								{% include 'box-movil.html' %}
+							</div>
+						</div>
+						<div id="redes-sociales" class="box-result box-green">
+							<div class="box-titulo">
+								<img alt="cargando..." class="loader" src="{% static 'web/images/loader.gif' %}" />
+								<h3>Redes Sociales</h3>
+							</div>
+							<div class="box-contenido">
+								{% include 'box-social.html' %}
+							</div>
+						</div>
+						<div id="usabilidad" class="box-result box-yellow">
+							<div class="box-titulo">
+								<img alt="cargando..." class="loader" src="{% static 'web/images/loader.gif' %}" />
+								<h3>Usabilidad</h3>
+							</div>
+							<div class="box-contenido">
+								{% include 'box-usabilidad.html' %}
+							</div>
+						</div>
+						<div id="seguridad" class="box-result box-purple">
+							<div class="box-titulo">
+								<img alt="cargando..." class="loader" src="{% static 'web/images/loader.gif' %}" />
+								<h3>Seguridad</h3>
+							</div>
+							<div class="box-contenido">
+								{% include 'box-seguridad.html' %}
+							</div>
+						</div>
+						<div id="tecnologia" class="box-result box-blue">
+							<div class="box-titulo">
+								<img alt="cargando..." class="loader" src="{% static 'web/images/loader.gif' %}" />
+								<h3>Técnologias</h3>
+							</div>
+							<div class="box-contenido">
+								{% include 'box-tecnologia.html' %}
+							</div>
+						</div>
+					</div>
+					<input type="hidden" id="dominio" value="{{ dominio }}" />
+					<div id="menu" class="menu visible-desktop">
+						<ul>
+							<li>
+								<a title="trafico" href="#trafico"><span class="menu-icon menu-trafico">Trafico</span></a>
+							</li>
+							<li>
+								<a href="#esencial"><span class="menu-icon menu-esencial">Lo esencia SEO</span></a>
+							</li>
+							<li>
+								<a href="#enlaces-seo"><span class="menu-icon menu-enlaces">Enlaces SEO</span></a>
+							</li>
+							<li>
+								<a href="#contenido"><span class="menu-icon menu-contenido">Contenido SEO</span></a>
+							</li>
+							<li>
+								<a href="#movil"><span class="menu-icon menu-movil">Movil</span></a>
+							</li>
+							<li>
+								<a href="#redes-sociales"><span class="menu-icon menu-social">Redes Sociales</span></a>
+							</li>
+							<li>
+								<a href="#usabilidad"><span class="menu-icon menu-usabilidad">Usabilidad</span></a>
+							</li>
+							<li>
+								<a href="#seguridad"><span class="menu-icon menu-seguridad">Seguridad</span></a>
+							</li>
+							<li>
+								<a href="#tecnologia"><span class="menu-icon menu-tecnologia">Técnologias</span></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
