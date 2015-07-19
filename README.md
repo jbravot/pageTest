@@ -1,8 +1,3 @@
-# pageTest
-Aplicación que permite probar si un sitio web cumple con 
-varios de los principales factores SEO para el posicionamiento 
-en los diferentes motores de búsqueda.
-
 pageTest
 ============
 
